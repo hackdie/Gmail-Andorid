@@ -20,7 +20,7 @@ class RestModule {
     @Singleton
     @Named("serverUrl")
     fun provideServerUrl(): String {
-        return "http://api.androidhive.info/json/"
+        return "http://34.251.1.35/"
     }
 
     @Provides

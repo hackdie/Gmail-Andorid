@@ -21,6 +21,7 @@ import android.support.v7.widget.RecyclerView
 import android.view.*
 import android.graphics.RectF
 import android.graphics.BitmapFactory
+import android.util.Log
 import android.view.ViewGroup
 
 
@@ -60,7 +61,6 @@ class HomeView : Fragment(), IHome.View, HomeViewHolder.MessageAdapterListener {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-
         (activity as MainActivity).setSupportActionBar(toolbar)
 
         adapter = HomeAdapter(this, context)
@@ -84,19 +84,17 @@ class HomeView : Fragment(), IHome.View, HomeViewHolder.MessageAdapterListener {
     }
 
     override fun onIconImportantClicked(position: Int) {
-        val message = emails[position]
-        message.isImportant = !message.isImportant
-        emails[position] = message
+        val message = adapter.getEmailAt(position)
+        adapter.getEmailAt(position).isImportant = !message.isImportant
         adapter.notifyDataSetChanged()
     }
 
     override fun onMessageRowClicked(position: Int) {
         if (adapter.getSelectedItemCount() > 0) {
-            enableActionMode(position);
+            enableActionMode(position)
         } else{
-            Toast.makeText(context, "Read: " + emails[position].message, Toast.LENGTH_SHORT).show()
+            Toast.makeText(context, "Read: " + adapter.getEmailAt(position).message, Toast.LENGTH_SHORT).show()
         }
-
     }
 
     private fun enableActionMode(position: Int) {
@@ -113,7 +111,6 @@ class HomeView : Fragment(), IHome.View, HomeViewHolder.MessageAdapterListener {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         val id = item.itemId
-
 
         if (id == R.id.action_search) {
             Toast.makeText(context, "Search...", Toast.LENGTH_SHORT).show()
@@ -141,14 +138,6 @@ class HomeView : Fragment(), IHome.View, HomeViewHolder.MessageAdapterListener {
         enableActionMode(position)
     }
 
-
-//    private fun removeView() {
-//        if (view?.parent != null) {
-//            (view?.parent as ViewGroup).removeView(view)
-//        }
-//    }
-
-
     /*
         Swipe callback
      */
@@ -164,6 +153,7 @@ class HomeView : Fragment(), IHome.View, HomeViewHolder.MessageAdapterListener {
 
             if (direction == ItemTouchHelper.LEFT) {
                 adapter.removeAt(position)
+                adapter.notifyItemRemoved(position)
             } else {
 
             }
@@ -205,6 +195,18 @@ class HomeView : Fragment(), IHome.View, HomeViewHolder.MessageAdapterListener {
 
      */
 
+    private fun deleteMessages() {
+        adapter.resetAnimationIndex()
+        val selectedItemPositions = adapter.getSelectedItems().reversed()
+        Log.e("asdas","asdas" + selectedItemPositions)
+
+        for(index in selectedItemPositions) {
+            adapter.removeAt(index)
+        }
+
+        adapter.notifyDataSetChanged()
+    }
+
 
     inner class ActionModeCallback : ActionMode.Callback {
         override fun onCreateActionMode(mode: ActionMode, menu: Menu): Boolean {
@@ -217,18 +219,15 @@ class HomeView : Fragment(), IHome.View, HomeViewHolder.MessageAdapterListener {
         }
 
         override fun onActionItemClicked(mode: ActionMode, item: MenuItem): Boolean {
-//            when (item.getItemId()) {
-//                R.id.action_delete -> {
-//                    // delete all the selected messages
-//                    deleteMessages()
-//                    mode.finish()
-//                    return true
-//                }
-//
-//                else -> return false
-//            }
+            when (item.itemId) {
+                R.id.action_delete -> {
+                    deleteMessages()
+                    mode.finish()
+                    return true
+                }
 
-            return false
+                else -> return false
+            }
         }
 
         override fun onDestroyActionMode(mode: ActionMode) {

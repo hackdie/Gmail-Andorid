@@ -160,7 +160,21 @@ class HomeAdapter(mListener: HomeViewHolder.MessageAdapterListener, context: Con
 
     fun removeAt(position: Int) {
         items.removeAt(position)
-        notifyItemRemoved(position)
+        resetCurrentIndex()
+    }
+
+    fun getSelectedItems(): List<Int> {
+        val items = ArrayList<Int>(selectedItems.size())
+
+        for (i in 0..selectedItems.size() - 1) {
+            items.add(selectedItems.keyAt(i))
+        }
+
+        return items
+    }
+
+    fun getEmailAt(position: Int): Email {
+        return items[position]
     }
 
 }

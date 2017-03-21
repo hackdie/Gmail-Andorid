@@ -10,6 +10,6 @@ import retrofit2.http.GET
  *
  */
 interface ApiInterface {
-    @GET("inbox.json")
+    @GET("jsonEcho")
     fun getInbox(): Call<List<Email>>
 }

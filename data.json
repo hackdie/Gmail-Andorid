@@ -1,0 +1,150 @@
+[{
+  "id": 1,
+  "isImportant": false,
+  "picture": "http://api.androidhive.info/json/google.png",
+  "from": "Google Alerts",
+  "subject": "Google Alert - android",
+  "message": "Now android supports multiple voice recogonization",
+  "timestamp": "10:30 AM",
+  "isRead" : false
+},
+  {
+    "id": 2,
+    "isImportant": true,
+    "picture": "",
+    "from": "Amazon.in",
+    "subject": "Apple Macbook Pro",
+    "message": "Your Amazon.in Today's Deal Get Macbook Pro",
+    "timestamp": "9:20 AM",
+    "isRead" : false
+  },
+  {
+    "id": 3,
+    "isImportant": false,
+    "picture": "http://api.androidhive.info/json/imdb.png",
+    "from": "IMDB",
+    "subject": "Check out top rated movies this week",
+    "message": "Find out the top rated movies this week by editor choice",
+    "timestamp": "9:15 AM",
+    "isRead" : false
+  },
+  {
+    "id": 4,
+    "isImportant": false,
+    "picture": "https://scontent-frt3-1.xx.fbcdn.net/v/t1.0-1/p160x160/16298485_10208198778434887_8511207535440105240_n.jpg?oh=37c747b74709ff3bbdec6102c189cea5&oe=5929B733",
+    "from": "Dinesh Reddy, Me",
+    "subject": "Let's get started",
+    "message": "I started working on project proposals. Wanted to know",
+    "timestamp": "9:00 AM",
+    "isRead" : true
+  },
+  {
+    "id": 5,
+    "isImportant": false,
+    "picture": "",
+    "from": "BookMyShow",
+    "subject": "Will the lost boy find his family?",
+    "message": "LION a movie that humanity needs. Online version report spam 97%",
+    "timestamp": "8:55 AM",
+    "isRead" : false
+  },
+  {
+    "id": 6,
+    "isImportant": false,
+    "picture": "",
+    "from": "MakeMyTrip",
+    "subject": "A joyous Train Ride in North East!",
+    "message": "North East Package starting from Rs31,999/- only!",
+    "timestamp": "8:10 AM",
+    "isRead" : false
+  },
+  {
+    "id": 7,
+    "isImportant": false,
+    "picture": "",
+    "from": "Disqus 14",
+    "subject": "Re: Comment on Android Working with",
+    "message": "Hey Ravi, after following your article I am getting this error",
+    "timestamp": "8:10 AM",
+    "isRead" : true
+  },
+  {
+    "id": 8,
+    "isImportant": true,
+    "picture": "",
+    "from": "Evans, Ravi 3",
+    "subject": "Advertisement Enquiry",
+    "message": "Hello, I want to buy the advertising space on",
+    "timestamp": "7:59 AM",
+    "isRead" : false
+  },
+  {
+    "id": 9,
+    "isImportant": false,
+    "picture": "https://lh3.googleusercontent.com/9JKVlFDCj9VVIbI66z_JEXGXvQpUXc-EwXfDmYP9c-8Lwb6Bd_zZ9i6VygPpyXLj3PkNCtpmTvaKKw=w300-h300-rw-no",
+    "from": "Karthik Tamada",
+    "subject": "Call Me",
+    "message": "I am going home because I am not feeling well!",
+    "timestamp": "4:05 AM",
+    "isRead" : false
+  },
+  {
+    "id": 10,
+    "isImportant": false,
+    "picture": "",
+    "from": "Order-Update",
+    "subject": "Your Amazon order #408-2878882019",
+    "message": "Your Orders | Amazon.in shipment of pendrive",
+    "timestamp": "5:00 AM",
+    "isRead" : true
+  },
+  {
+    "id": 11,
+    "isImportant": false,
+    "picture": "",
+    "from": "Instapage",
+    "subject": "Lead notification from Instapage",
+    "message": "Congratulations! You just aquired a new lead",
+    "timestamp": "3:00 AM",
+    "isRead" : false
+  },
+  {
+    "id": 12,
+    "isImportant": false,
+    "picture": "",
+    "from": "Droid5",
+    "subject": "Droid5 Android Project",
+    "message": "Planning to start an android app for droid5",
+    "timestamp": "5:00 AM",
+    "isRead" : false
+  },
+  {
+    "id": 13,
+    "isImportant": true,
+    "picture": "",
+    "from": "Gmail Team",
+    "subject": "Gmail Business Suite",
+    "message": "Your Gmail business suite is expiring today!",
+    "timestamp": "Feb 20",
+    "isRead" : true
+  },
+  {
+    "id": 14,
+    "isImportant": false,
+    "picture": "",
+    "from": "Medium Daily Digest",
+    "subject": "6 Things You need to know to Recover",
+    "message": "Daily Digest Your daily three recommendations",
+    "timestamp": "8:15 AM",
+    "isRead" : false
+  },
+  {
+    "id": 15,
+    "isImportant": false,
+    "picture": "",
+    "from": "Alex, Ravi 24",
+    "subject": "Advertisement proposal to promote my android app",
+    "message": "Hello Ravi, Thanks for your link. Here is the proposal",
+    "timestamp": "Feb 17",
+    "isRead" : false
+  }]
